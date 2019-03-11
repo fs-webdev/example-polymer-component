@@ -23,5 +23,6 @@ $ polymer serve --open
 * Rendering a list
 * Composing components
 * Click event handling
+* Custom Event dispatch/listener
 
 All the data is in `data.json`.

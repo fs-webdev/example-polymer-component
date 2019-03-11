@@ -43,10 +43,14 @@ class PersonItem extends PolymerElement {
           [[capitalizeName(person.name.last)]]
         </p>
         <p>[[person.email]]</p>
+        <button on-click="choosePerson">Choose Person</button>
       </div>
     `;
   }
-
+  choosePerson(e){
+    e.preventDefault();
+    this.dispatchEvent(new CustomEvent('choosePerson', {bubbles:true, composed:true, detail: this.person}))
+  }
   capitalizeName(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
   }

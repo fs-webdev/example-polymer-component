@@ -11,6 +11,12 @@ import "./person-item.js";
  * @demo demo/index.html
  */
 class PersonList extends PolymerElement {
+  constructor() {
+    super();
+    this.addEventListener("choosePerson", ({ detail }) => {
+      console.log(detail);
+    });
+  }
   static get template() {
     return html`
       <style>
